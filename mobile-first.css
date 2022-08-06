@@ -211,6 +211,11 @@ select {
   margin: 2rem 2rem 4rem;
 }
 
+.see-more_img{
+  max-width: 2.5rem;
+  margin-right:1rem ;
+}
+
 /* NAV BAR */
 nav {
   display: flex;
@@ -231,6 +236,7 @@ nav {
 }
 
 
+
 /* HEADER - NEW PRODUCTS SECTION */
 
 .slider-container {
@@ -241,7 +247,6 @@ nav {
 
 
 .slider-box {
-
   display: grid;
   grid-auto-flow: column;
   grid-auto-flow: row;
@@ -271,6 +276,22 @@ nav {
   grid-column: 2/3;
   grid-row: 6/7;
   margin: 1rem;
+}
+
+.slide-btn{
+  width: 5rem;
+  height: 5rem;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.arrow{
+  font-size:3rem;
+  margin-top: -.7rem;
+  color: var(--clr-text-secondary);
 }
 
 /* ABOUT US - SECTION */
