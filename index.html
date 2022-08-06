@@ -10,9 +10,12 @@
 </head>
 
 <body>
-    <nav class="nav">
+    <nav>
         <!-- logo -->
-        <div class="nav-logo">Подари со љубов</div>
+        <div class="nav-logo flex"><span><img src="/img/products/product-1.png" alt="logo-img"
+                    class="logo_img"></span>Подари
+            со
+            љубов</div>
         <!-- nav sites -->
         <div class="nav-sites">
             <a href="#" class="home">Почетна</a>
@@ -21,54 +24,54 @@
         </div>
     </nav>
     <header>
-        <h1 class="primary-heading"><span><img src"" alt="new-product-logo"></span>Нови продукти</h1>
-        <h3 class="tertiary-heading">Види повеќе</h3>
+        <div class="heading-container">
+            <img src="/img/icons/new-products.png" alt="new-product-logo" class="heading-icon">
+            <h1 class="heading-primary">Нови продукти</h1>
+        </div>
+
+        <div class="see-more">
+            <a href="/products.html"><img src="/img/icons/see-more.png" alt="buttons-img" class="see-more_button"></a>
+            <a href="/products.html" class="heading-tertiary">Види повеќе</a>
+        </div>
+
 
         <!--! Slider for product images  -->
-        <div class="slider-container">
+        <div class="slider-container flex">
             <!--! slider -previous button -->
-            <button aria-label="Previous" class="glider-prev">«</button>
+            <button aria-label="Previous" class="slider-prev slide-btn">«</button>
             <!-- IMAGE #1 -->
             <div class="slider-box">
-                <img src="" alt="" class="slider_img">
-                <h3 class="tertiary-heading">Подари со љубов</h3>
-                <button class="btn">699ден</button>
+                <img src="/img/products/product-1.png" alt="" class="slider-img">
+                <h3 class="heading-tertiary">Подари со љубов</h3>
+                <button class="btn"><a href="/products.html">699ден</a></button>
+
             </div>
             <!-- IMAGE #2 -->
             <div class="slider-box">
-                <img src="" alt="" class="slider_img">
-                <h3 class="tertiary-heading">Подари со љубов</h3>
-                <button class="btn">699ден</button>
+                <img src="/img/products/product-1.png" alt="" class="slider-img">
+                <h3 class="heading-tertiary">Подари со љубов</h3>
+                <button class="btn"><a href="/products.html">699ден</a></button>
+
             </div>
             <!-- IMAGE #3 -->
             <div class="slider-box">
-                <img src="" alt="" class="slider_img">
-                <h3 class="tertiary-heading">Подари со љубов</h3>
-                <button class="btn">699ден</button>
-            </div>
-            <!-- IMAGE #4 -->
-            <div class="slider-box">
-                <img src="" alt="" class="slider_img">
-                <h3 class="tertiary-heading">Подари со љубов</h3>
-                <button class="btn">699ден</button>
-            </div>
-            <!-- IMAGE #5 -->
-            <div class="slider-box">
-                <img src="" alt="" class="slider_img">
-                <h3 class="tertiary-heading">Подари со љубов</h3>
-                <button class="btn">699ден</button>
-            </div>
-            <!-- IMAGE #6 -->
-            <div class="slider-box">
-                <img src="" alt="" class="slider_img">
-                <h3 class="tertiary-heading">Подари со љубов</h3>
-                <button class="btn">699ден</button>
+                <img src="/img/products/product-1.png" alt="" class="slider-img">
+                <h3 class="heading-tertiary">Подари со љубов</h3>
+                <button class="btn"><a href="/products.html">699ден</a></button>
             </div>
 
+            <!-- IMAGE #4 -->
+            <div class="slider-box">
+                <img src="/img/products/product-1.png" alt="" class="slider-img">
+                <h3 class="heading-tertiary">Подари со љубов</h3>
+                <button class="btn"><a href="/products.html">699ден</a></button>
+
+            </div>
+
+            <!--! slider - next button  -->
+            <button aria-label="Next" class="slider-next slide-btn">»</button>
             <!--! slider tablist -->
             <div role="tablist" class="dots"></div>
-            <!--! slider - next button  -->
-            <button aria-label="Next" class="glider-next">»</button>
         </div>
     </header>
     <main>
@@ -81,10 +84,10 @@
 
             <!-- about us content -->
             <div class="about-us_content">
-                <h1 class="primary-heading">
+                <h1 class="heading-primary">
                     За нас
                 </h1>
-                <p class="secondary-paragraph">
+                <p class="paragraph-secondary">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum quia aperiam, necessitatibus
                     architecto cum voluptatem deleniti ratione! Ullam quisquam dolor voluptatem beatae, consequatur,
                     maiores soluta dolorem quibusdam odit quia facere vel magni nobis. Quasi accusamus aspernatur
@@ -95,16 +98,16 @@
 
         <!-- OUR WORK - SECTION -->
         <section class="our-work">
-            <h1 class="primary-heading"><span>logo</span>Принцип на нашата работа</h1>
+            <h1 class="heading-primary"><span>logo</span>Принцип на нашата работа</h1>
             <div class="our-work_container">
                 <div class="our-work_box">
                     <!-- box #1 work -->
-                    <div class="box_img">
+                    <div class="box-img">
                         <img src="" alt="">
                     </div>
                     <!-- box content -->
-                    <h3 class="tertiary heading">Изработка на вез</h3>
-                    <p class="secondary-paragraph">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda,
+                    <h3 class="heading-tertiary">Изработка на вез</h3>
+                    <p class="paragraph-secondary">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda,
                         hic?</p>
                     <div class="arrow">
                         <img src="" alt="">
@@ -113,12 +116,12 @@
 
                 <div class="our-work_box">
                     <!-- box #2 package -->
-                    <div class="box_img">
+                    <div class="box-img">
                         <img src="" alt="">
                     </div>
                     <!-- box content -->
-                    <h3 class="tertiary heading">Изработка на вез</h3>
-                    <p class="secondary-paragraph">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda,
+                    <h3 class="heading-tertiary">Пакување</h3>
+                    <p class="paragraph-secondary">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda,
                         hic?</p>
                     <div class="arrow">
                         <img src="" alt="">
@@ -127,12 +130,12 @@
 
                 <div class="our-work_box">
                     <!-- box #3 cargo -->
-                    <div class="box_img">
+                    <div class="box-img">
                         <img src="" alt="">
                     </div>
                     <!-- box content -->
-                    <h3 class="tertiary heading">Изработка на вез</h3>
-                    <p class="secondary-paragraph">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda,
+                    <h3 class="heading-tertiary">Достава по карго</h3>
+                    <p class="paragraph-secondary">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda,
                         hic?</p>
                     <div class="arrow">
                         <img src="" alt="">
@@ -149,27 +152,27 @@
 
         <div class="footer-contactInfo">
             <!-- Follow us -->
-            <h2 class="secondary-heading">Следете не:</h2>
+            <h2 class="secondary">Следете не:</h2>
 
             <!-- Instagram -->
             <span class="social-icon"><img src="" alt=""></span>
-            <a href="#instagram-link" class="secondary-heading">@podarisoljubov</a>
+            <a href="#instagram-link" class="secondary">@podarisoljubov</a>
 
             <!-- Facebook -->
             <span class="social-icon"><img src="" alt=""></span>
-            <a href="#facebook-link" class="secondary-heading">Podari so ljubov</a>
+            <a href="#facebook-link" class="secondary">Podari so ljubov</a>
 
 
             <!-- Contact -->
-            <h2 class="secondary-heading">Контакт:</h2>
+            <h2 class="secondary">Контакт:</h2>
 
             <!-- Phone number -->
             <span class="social-icon"><img src="" alt=""></span>
-            <h2 class="secondary-heading">+389 78 000 000</h2>
+            <h2 class="secondary">+389 78 000 000</h2>
 
             <!-- Gmail -->
             <span class="social-icon"><img src="" alt=""></span>
-            <a href="#gmail-link" class="secondary-heading">podarisoljubov@gmail.com</a>
+            <a href="#gmail-link" class="secondary">podarisoljubov@gmail.com</a>
         </div>
     </footer>
 
