@@ -9,9 +9,9 @@
   --clr-text-secondary: hsl(0, 0%, 36%);
 
   /* font sizes */
-  --fs-primary: clamp(1.1rem, 3vw + 1rem, 2.4rem);
-  --fs-secondary: clamp(.8rem, 3vw + 1rem, 2rem);
-  --fs-tertiary: clamp(.6rem, 3vw + 1rem, 1.35rem);
+  --fs-primary: clamp(1rem, 3vw + .5rem, 2.4rem);
+  --fs-secondary: clamp(1.2rem, 2.5vw + .5rem, 2.4rem);
+  --fs-tertiary: clamp(1.4rem, 1.5vw + .5rem, 1.6rem);
 
 
   /* line height */
@@ -122,14 +122,21 @@ select {
 }
 
 
-
-
 /* UTILITIES */
+
+/* LAYOUTS */
 .flex {
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
+.grid {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-flow: row;
+}
+
 
 /* TYPOGRAHPY */
 
@@ -150,12 +157,12 @@ select {
 }
 
 /* Paragraphs */
-.paragraph-primary{
+.paragraph-primary {
   font-size: var(--fs-secondary);
   color: var(--clr-text-primary);
 }
 
-.paragraph-secondary{
+.paragraph-secondary {
   font-size: var(--fs-tertiary);
   color: var(--clr-text-secondary);
 }
@@ -201,45 +208,46 @@ select {
   display: flex;
   align-items: center;
   justify-content: end;
-  margin-right: 2rem;
-  margin-bottom: 2rem;
+  margin: 2rem 2rem 4rem;
 }
-
-
 
 /* NAV BAR */
 nav {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  margin: 0 0 3rem 0;
+  justify-content: space-between;
+  margin: 3rem 0;
 }
 
 .logo_img {
-  max-width: 5rem;
-  margin-inline: .5rem;
-  margin-bottom: .2rem;
+  max-width: 4rem;
+  margin: .5rem .5rem;
   font-size: var(--fs-secondary);
   color: var(--clr-text-primary);
+}
+
+.nav-sites {
+  display: none;
 }
 
 
 /* HEADER - NEW PRODUCTS SECTION */
 
 .slider-container {
-  width: 100%;
-  height: 100%;
+  /* width: 100%;
+    height: 100%; */
   margin-bottom: 4rem;
 }
 
+
 .slider-box {
-  margin: .8rem;
-  max-width: 30rem;
 
   display: grid;
   grid-auto-flow: column;
   grid-auto-flow: row;
 
+  margin: .8rem;
+  max-width: 30rem;
   height: 100%;
   border-radius: 1rem;
   box-shadow: .2rem 1rem 1rem var(--clr-secondary);
@@ -267,23 +275,40 @@ nav {
 
 /* ABOUT US - SECTION */
 
-.about-us{
-  height: 45vh;
+.about-us {
   background-color: var(--clr-secondary);
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  padding: .5rem;
+}
+
+.about-us>* {
+  margin: 2.5rem;
+  text-align: left;
+}
+
+.about-us h1{
+  text-align: center;
+  margin-bottom: 1.8rem;
+}
+
+.about-us_img{
+  display: grid;
+  place-items: center;
+}
+
+
+
+
+/* MEDIA QUERIES */
+@media screen and (min-width:900px) {
+  .about-us {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .about-us_content {
+    text-align: left;
+    max-width: 50%;
+  }
   
-  margin: 0  4rem;
-}
 
-.about-us_content {
-  max-width: 50%;
-  text-align:left;
-  margin: 0 4rem;
-}
-
-
-.about-us_content h1{
-  margin-bottom: 2rem;
 }

@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="stylesheet" href="mobile-first.css">
     <title>Подари со љубов</title>
 </head>
 
@@ -13,11 +14,10 @@
     <nav>
         <!-- logo -->
         <div class="nav-logo flex"><span><img src="/img/products/product-1.png" alt="logo-img"
-                    class="logo_img"></span>Подари
-            со
-            љубов</div>
+                    class="logo_img"></span>Подари со љубов</div>
+
         <!-- nav sites -->
-        <div class="nav-sites">
+        <div class="nav-sites flex active">
             <a href="#" class="home">Почетна</a>
             <a href="./products.html" class="products">Продукти</a>
             <a href="#" class="contact">Контакт</a>
@@ -40,30 +40,32 @@
             <!--! slider -previous button -->
             <button aria-label="Previous" class="slider-prev slide-btn">«</button>
             <!-- IMAGE #1 -->
-            <div class="slider-box">
-                <img src="/img/products/product-1.png" alt="" class="slider-img">
-                <h3 class="heading-tertiary">Подари со љубов</h3>
-                <button class="btn"><a href="/products.html">699ден</a></button>
-
+            <div class="box-container">
+                <div class="slider-box">
+                    <img src="/img/products/product-1.png" alt="product" class="slider-img">
+                    <h3 class="heading-tertiary slider-heading">Подари со љубов</h3>
+                    <a href="/products.html" class="btn">699ден</a>
+                </div>
             </div>
+
             <!-- IMAGE #2 -->
             <div class="slider-box">
-                <img src="/img/products/product-1.png" alt="" class="slider-img">
-                <h3 class="heading-tertiary">Подари со љубов</h3>
+                <img src="/img/products/product-1.png" alt="product" class="slider-img">
+                <h3 class="heading-tertiary slider-heading">Подари со љубов</h3>
                 <button class="btn"><a href="/products.html">699ден</a></button>
 
             </div>
             <!-- IMAGE #3 -->
             <div class="slider-box">
-                <img src="/img/products/product-1.png" alt="" class="slider-img">
-                <h3 class="heading-tertiary">Подари со љубов</h3>
+                <img src="/img/products/product-1.png" alt="product" class="slider-img">
+                <h3 class="heading-tertiary slider-heading">Подари со љубов</h3>
                 <button class="btn"><a href="/products.html">699ден</a></button>
             </div>
 
             <!-- IMAGE #4 -->
             <div class="slider-box">
                 <img src="/img/products/product-1.png" alt="" class="slider-img">
-                <h3 class="heading-tertiary">Подари со љубов</h3>
+                <h3 class="heading-tertiary slider-heading">Подари со љубов</h3>
                 <button class="btn"><a href="/products.html">699ден</a></button>
 
             </div>
@@ -79,7 +81,7 @@
         <section class="about-us">
             <!-- about us img -->
             <div class="about-us_img">
-                <img src="" alt="">
+                <img src="/img/icons/about-us.png" alt="about-us">
             </div>
 
             <!-- about us content -->
@@ -88,10 +90,19 @@
                     За нас
                 </h1>
                 <p class="paragraph-secondary">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum quia aperiam, necessitatibus
-                    architecto cum voluptatem deleniti ratione! Ullam quisquam dolor voluptatem beatae, consequatur,
-                    maiores soluta dolorem quibusdam odit quia facere vel magni nobis. Quasi accusamus aspernatur
-                    numquam! Commodi iusto esse facere dicta, obcaecati tempore molestiae vel, sed quibusdam, minus hic?
+                    Lorem ipsum dolor sit amet. consectetur adipisicing elit. Nostrum quia aperiam, necessitatibus
+                    architecto numquam! Commodi iusto esse facere dicta, obcaecati tempore molestiae vel, sed quibusdam,
+                    minus hic?
+                </p>
+                <p class="paragraph-secondary">
+                    Lorem ipsum dolor sit amet. Nostrum quia aperiam, necessitatibus
+                    architecto numquam! Commodi iusto esse facere dicta, obcaecati tempore molestiae vel, sed quibusdam,
+                    minus hic?
+                </p>
+                <p class="paragraph-secondary">
+                    Lorem ipsum dolor sit amet. consectetur adipisicing elit. Nostrum quia aperiam, necessitatibus
+                    architecto numquam! Commodi iusto esse facere dicta, obcaecati tempore molestiae vel, sed quibusdam,
+                    minus hic?
                 </p>
             </div>
         </section>
@@ -152,27 +163,27 @@
 
         <div class="footer-contactInfo">
             <!-- Follow us -->
-            <h2 class="secondary">Следете не:</h2>
+            <h2 class="heading-secondary">Следете не:</h2>
 
             <!-- Instagram -->
             <span class="social-icon"><img src="" alt=""></span>
-            <a href="#instagram-link" class="secondary">@podarisoljubov</a>
+            <a href="#instagram-link" class="heading-tertiary">@podarisoljubov</a>
 
             <!-- Facebook -->
             <span class="social-icon"><img src="" alt=""></span>
-            <a href="#facebook-link" class="secondary">Podari so ljubov</a>
+            <a href="#facebook-link" class="heading-tertiary">Podari so ljubov</a>
 
 
             <!-- Contact -->
-            <h2 class="secondary">Контакт:</h2>
+            <h2 class="heading-secondary">Контакт:</h2>
 
             <!-- Phone number -->
             <span class="social-icon"><img src="" alt=""></span>
-            <h2 class="secondary">+389 78 000 000</h2>
+            <h2 class="heading-tertiary">+389 78 000 000</h2>
 
             <!-- Gmail -->
             <span class="social-icon"><img src="" alt=""></span>
-            <a href="#gmail-link" class="secondary">podarisoljubov@gmail.com</a>
+            <a href="#gmail-link" class="heading-tertiary">podarisoljubov@gmail.com</a>
         </div>
     </footer>
 
