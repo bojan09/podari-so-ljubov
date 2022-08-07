@@ -22,12 +22,8 @@
 
   /* width*/
   --width-primary: min(90%, 1800px);
-  
+
 }
-
-
-
-
 
 /* Base reset */
 
@@ -76,6 +72,10 @@ html {
   scroll-behavior: smooth;
 }
 
+html,
+body {
+  overflow-x: hidden;
+}
 
 /* Set core body defaults */
 body {
@@ -127,6 +127,34 @@ select {
     scroll-behavior: auto !important;
   }
 }
+
+/* SWIPER */
+
+
+.swiper-container {
+  max-width: 100%;
+  max-height: 100%;
+  margin-bottom: 4rem;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: var(--fs-secondary);
+
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
 
 
 /* UTILITIES */
@@ -182,18 +210,10 @@ select {
   color: var(--clr-text-primary);
   border: none;
   border-radius: .8rem;
-  padding: .4rem;
   cursor: pointer;
-}
-
-/* slider btn styles */
-.slide-btn {
-  border: none;
-  width: 3rem;
+  width: 10rem;
   height: 3rem;
-  border-radius: 50%;
 }
-
 
 
 /* BUTTON HOVER ANIMATIONS */
@@ -244,33 +264,6 @@ nav {
 
 /* HEADER - NEW PRODUCTS SECTION */
 
-.slider-container {
-  /* width: 100%;
-    height: 100%; */
-  margin-bottom: 4rem;
-}
-
-.btn {
-  grid-column: 2/3;
-  grid-row: 6/7;
-  margin: 1rem;
-}
-
-.slide-btn {
-  width: 5rem;
-  height: 5rem;
-  padding: 1rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-}
-
-.arrow {
-  font-size: 3rem;
-  margin-top: -.7rem;
-  color: var(--clr-text-secondary);
-}
 
 
 
@@ -353,47 +346,47 @@ nav {
 }
 
 
-  /* PRODUCTS SECTIONs */
+/* PRODUCTS SECTIONs */
 
 
-  .products {
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    flex-wrap: wrap;
-  }
+.products {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
+}
 
-  .product {
-    margin: 3.5rem;
-  }
+.product {
+  margin: 3.5rem;
+}
 
-  
-  .product {
-    display: grid;
-    grid-auto-flow: column;
-    grid-auto-flow: row;
-    padding: 2.7rem;
-    margin: 2rem 0;
-    max-width: 30rem;
-    height: 100%;
-    border-radius: 1rem;
-    box-shadow: .2rem 1rem 1rem var(--clr-secondary);
-  }
 
-  
-  .product-img {
-    max-width: 100%;
-    grid-column: 1/3;
-    grid-row: 1/3;
-  }
+.product {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-flow: row;
+  padding: 2.7rem;
+  margin: 2rem 0;
+  max-width: 30rem;
+  height: 100%;
+  border-radius: 1rem;
+  box-shadow: .2rem 1rem 1rem var(--clr-secondary);
+}
 
-  
-  .product-heading {
-    margin-top: 2rem;
-    margin-left: .5rem;
-    grid-column: 1/6;
-    grid-row: 5/6;
-  }
+
+.product-img {
+  max-width: 100%;
+  grid-column: 1/3;
+  grid-row: 1/3;
+}
+
+
+.product-heading {
+  margin-top: 2rem;
+  margin-left: .5rem;
+  grid-column: 1/6;
+  grid-row: 5/6;
+}
 
 
 
@@ -452,7 +445,7 @@ footer {
 
   /* NAVBAR */
 
-  .nav-container{
+  .nav-container {
     margin: 0;
   }
 
@@ -469,59 +462,52 @@ footer {
 
   /* HEADER - NEW PRODUCTS SECTION */
 
-  /* SLIDER  & PRODUCTS */
 
-  .slider-container {
-    /* width: 100%;
-    height: 100%; */
-    margin-bottom: 4rem;
-  }
-
-  .slider-box,
-  .product {
-    display: grid;
-    grid-auto-flow: column;
-    grid-auto-flow: row;
-
-    margin: .8rem;
-    max-width: 30rem;
-    height: 100%;
-    border-radius: 1rem;
-    box-shadow: .2rem 1rem 1rem var(--clr-secondary);
-  }
-
-  .slider-img,
-  .product-img {
-    max-width: 100%;
-    grid-column: 1/3;
-    grid-row: 1/3;
-  }
-
-  .slider-heading,
-  .product-heading {
-    margin-top: 2rem;
-    margin-left: .5rem;
-    grid-column: 1/6;
-    grid-row: 5/6;
-
-  }
-
-  /* PRODUCTS SECTIONs */
-
-
+  /* PRODUCTS SECTIONS*/
   .products {
     display: flex;
     justify-content: center;
     align-content: center;
     flex-wrap: wrap;
   }
-
   .product {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-flow: row;
+    row-gap: 1rem;
+
+    min-height: 35rem;
+    min-width: 35rem;
     margin: 3.5rem;
     padding: 2.7rem;
+    max-width: 30rem;
+    height: 100%;
+    background-color: var(--clr-secondary);
+    border-radius: 1rem;
+    box-shadow: .2rem 1rem 1rem var(--clr-secondary);
   }
 
 
+
+  .product-img {
+    max-width: 100%;
+    grid-column: 1/3;
+    grid-row: 1/3;
+  }
+
+  .product-heading {
+    grid-column: 1/2;
+    grid-row: 3/4;
+
+  }
+
+  .product-btn {
+    grid-column: 5/6;
+    grid-row: 4/5;
+    display: grid;
+    place-items: center;
+
+  }
 
 
 

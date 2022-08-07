@@ -5,8 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="stylesheet" href="style.css"> -->
-    <link rel="stylesheet" href="/style.css">
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+
+    <link rel="stylesheet" href="style.css">
     <title>Подари со љубов</title>
 </head>
 
@@ -36,47 +38,44 @@
         </div>
 
 
-        <!--! Slider for product images  -->
-        <div class="slider-container flex">
-            <!--! slider -previous button -->
-            <button aria-label="Previous" class="slide-btn"><span class="left-arrow arrow">&#8249;</span></button>
-            <!-- IMAGE #1 -->
-            <div class="box-container">
-                <div class="slider-box">
-                    <img src="/img/products/product-1.png" alt="product" class="slider-img">
-                    <h3 class="heading-tertiary slider-heading">Подари со љубов</h3>
-                    <a href="/products.html" class="btn">699ден</a>
+        <!-- Swiper Start -->
+        <div #swiperRef="" class="swiper-container mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="product">
+                        <img src="/img/products/product-1.png" alt="product" class="product-img">
+                        <h3 class="heading-tertiary product-heading">Подари со љубов</h3>
+                        <a href="https://www.instagram.com/podari.soljubov/" class="btn product-btn">Види повеќе</a>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="product">
+                        <img src="/img/products/product-1.png" alt="product" class="product-img">
+                        <h3 class="heading-tertiary product-heading">Подари со љубов</h3>
+                        <a href="https://www.instagram.com/podari.soljubov/" class="btn product-btn">Види повеќе</a>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="product">
+                        <img src="/img/products/product-1.png" alt="product" class="product-img">
+                        <h3 class="heading-tertiary product-heading">Подари со љубов</h3>
+                        <a href="https://www.instagram.com/podari.soljubov/" class="btn product-btn">Види повеќе</a>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="product">
+                        <img src="/img/products/product-1.png" alt="product" class="product-img">
+                        <h3 class="heading-tertiary product-heading">Подари со љубов</h3>
+                        <a href="https://www.instagram.com/podari.soljubov/" class="btn product-btn">Види повеќе</a>
+                    </div>
                 </div>
             </div>
-
-            <!-- IMAGE #2 -->
-            <div class="slider-box">
-                <img src="/img/products/product-1.png" alt="product" class="slider-img">
-                <h3 class="heading-tertiary slider-heading">Подари со љубов</h3>
-                <button class="btn"><a href="/products.html">699ден</a></button>
-
-            </div>
-            <!-- IMAGE #3 -->
-            <div class="slider-box">
-                <img src="/img/products/product-1.png" alt="product" class="slider-img">
-                <h3 class="heading-tertiary slider-heading">Подари со љубов</h3>
-                <button class="btn"><a href="/products.html">699ден</a></button>
-            </div>
-
-            <!-- IMAGE #4 -->
-            <div class="slider-box">
-                <img src="/img/products/product-1.png" alt="" class="slider-img">
-                <h3 class="heading-tertiary slider-heading">Подари со љубов</h3>
-                <button class="btn"><a href="/products.html">699ден</a></button>
-
-            </div>
-
-            <!--! slider - next button  -->
-            <button aria-label="Next" class="slider-next slide-btn"><span
-                    class="right-arrow arrow">&#8250;</span></button>
-            <!--! slider tablist -->
-            <div role="tablist" class="dots"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
         </div>
+
+        <!-- Swiper End -->
     </header>
 
     <main>
@@ -217,7 +216,10 @@
     </footer>
 
 
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="/script.js"></script>
+
+
 </body>
 
 </html>
