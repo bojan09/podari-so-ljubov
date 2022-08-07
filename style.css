@@ -271,16 +271,18 @@ nav {
 .about-us {
   background-color: var(--clr-secondary);
   padding: .5rem;
+  display: grid;
+  place-items: center;
 }
 
-.about-us>* {
-  margin: 2.5rem;
-  text-align: left;
+.about-us_content{
+  max-width: 50%;
+  margin: 2rem 0; 
 }
 
-.about-us h1 {
+.about-us h1{
   text-align: center;
-  margin-bottom: 1.8rem;
+
 }
 
 .about-us_img {
@@ -374,18 +376,25 @@ nav {
 }
 
 
+
 .product-img {
   max-width: 100%;
   grid-column: 1/3;
   grid-row: 1/3;
 }
 
-
 .product-heading {
-  margin-top: 2rem;
-  margin-left: .5rem;
-  grid-column: 1/6;
-  grid-row: 5/6;
+  grid-column: 1/2;
+  grid-row: 3/4;
+
+}
+
+.product-btn {
+  grid-column: 5/6;
+  grid-row: 4/5;
+  display: grid;
+  place-items: center;
+
 }
 
 
@@ -470,16 +479,16 @@ footer {
     align-content: center;
     flex-wrap: wrap;
   }
+
   .product {
     display: grid;
     grid-auto-flow: column;
     grid-auto-flow: row;
     row-gap: 1rem;
 
-    min-height: 35rem;
+    min-height: 30rem;
     min-width: 35rem;
     margin: 3.5rem;
-    padding: 2.7rem;
     max-width: 30rem;
     height: 100%;
     background-color: var(--clr-secondary);
@@ -488,7 +497,7 @@ footer {
   }
 
 
-
+/* 
   .product-img {
     max-width: 100%;
     grid-column: 1/3;
@@ -507,7 +516,7 @@ footer {
     display: grid;
     place-items: center;
 
-  }
+  } */
 
 
 
@@ -519,8 +528,14 @@ footer {
   }
 
   .about-us_content {
+    margin-left: 10rem;
     text-align: left;
-    max-width: 50%;
+    max-width: 25%;
+  }
+
+  .about-us p {
+    margin-bottom: 2rem;
+
   }
 
   /* OUR WORK - SECTION */
