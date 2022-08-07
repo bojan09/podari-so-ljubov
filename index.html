@@ -6,24 +6,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- <link rel="stylesheet" href="style.css"> -->
-    <link rel="stylesheet" href="mobile-first.css">
+    <link rel="stylesheet" href="/style.css">
     <title>Подари со љубов</title>
 </head>
 
 <body>
-    <nav>
+    <nav class="container">
         <!-- logo -->
-        <div class="nav-logo flex"><span><img src="/img/products/product-1.png" alt="logo-img"
-                    class="logo_img"></span>Подари со љубов</div>
+        <div class="nav-logo flex"><span><img src="/img/products/product-1.png" alt="logo-img" class="logo_img"></span>
+            <h1 class="heading-secondary">Подари со љубов</h1>
+        </div>
 
         <!-- nav sites -->
         <div class="nav-sites flex active">
-            <a href="#" class="home">Почетна</a>
-            <a href="./products.html" class="products">Продукти</a>
-            <a href="#" class="contact">Контакт</a>
+            <a href="#home" id="home">Почетна</a>
+            <a href="./products.html" id="products">Продукти</a>
+            <a href="#footer" id="contact">Контакт</a>
         </div>
     </nav>
-    <header>
+    <header class="container">
         <div class="heading-container">
             <img src="/img/icons/new-products.png" alt="new-product-logo" class="heading-icon">
             <h1 class="heading-primary">Нови продукти</h1>
@@ -77,6 +78,7 @@
             <div role="tablist" class="dots"></div>
         </div>
     </header>
+
     <main>
         <!-- ABOUT US - SECTION -->
         <section class="about-us">
@@ -109,82 +111,108 @@
         </section>
 
         <!-- OUR WORK - SECTION -->
-        <section class="our-work">
-            <h1 class="heading-primary"><span>logo</span>Принцип на нашата работа</h1>
-            <div class="our-work_container">
-                <div class="our-work_box">
+        <section class="our-work container">
+            <div class="heading-container flex">
+                <img src="/img/icons/out-work-1.png" alt="our-work" class="heading-icon">
+                <h1 class="heading-primary">Принцип на нашата работа</h1>
+            </div>
+            <div class="our-work_container grid">
+
+                <div class="our-work_box embroidery">
                     <!-- box #1 work -->
+                    <!-- embroidery image -->
                     <div class="box-img">
-                        <img src="" alt="">
+                        <img src="/img/icons/our-work-2.png" alt="our-work">
                     </div>
                     <!-- box content -->
-                    <h3 class="heading-tertiary">Изработка на вез</h3>
-                    <p class="paragraph-secondary">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda,
-                        hic?</p>
-                    <div class="arrow">
-                        <img src="" alt="">
+                    <div class="box-content">
+                        <h3 class="heading-tertiary">Изработка на вез</h3>
+                        <p class="paragraph-secondary">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                            Assumenda,
+                            hic?</p>
                     </div>
+
                 </div>
 
-                <div class="our-work_box">
+                <div class="our-work_box package">
                     <!-- box #2 package -->
+                    <!-- package img for mobile, will be hidden in mobile-->
                     <div class="box-img">
-                        <img src="" alt="">
+                        <img src="/img/icons/our-work-3.svg" alt="our-work-packaging" class="package_img_desktop">
                     </div>
                     <!-- box content -->
-                    <h3 class="heading-tertiary">Пакување</h3>
-                    <p class="paragraph-secondary">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda,
-                        hic?</p>
-                    <div class="arrow">
-                        <img src="" alt="">
+                    <div class="box-content">
+                        <h3 class="heading-tertiary">Пакување</h3>
+                        <p class="paragraph-secondary">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                            Assumenda,
+                            hic?</p>
                     </div>
+                    <!-- package img for mobile, will be hidden in desktop-->
+                    <div class="box-img">
+                        <img src="/img/icons/our-work-3.svg" alt="our-work-packaging" class="package_img_mobile">
+                    </div>
+
                 </div>
 
-                <div class="our-work_box">
+                <div class="our-work_box cargo">
                     <!-- box #3 cargo -->
+                    <!-- cargo img -->
                     <div class="box-img">
-                        <img src="" alt="">
+                        <img src="/img/icons/our-work-4.png" alt="our-work-cargo">
                     </div>
                     <!-- box content -->
-                    <h3 class="heading-tertiary">Достава по карго</h3>
-                    <p class="paragraph-secondary">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda,
-                        hic?</p>
-                    <div class="arrow">
-                        <img src="" alt="">
+                    <div class="box-content">
+                        <h3 class="heading-tertiary">Достава по карго</h3>
+                        <p class="paragraph-secondary">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                            Assumenda,
+                            hic?</p>
                     </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer>
-        <div class="footer-logo">
-            <img src="" alt="">
-        </div>
-
-        <div class="footer-contactInfo">
-            <!-- Follow us -->
+    <!-- FOOTER -->
+    <footer class="grid" id="footer">
+        <!-- Follow us -->
+        <div class="follow-us">
             <h2 class="heading-secondary">Следете не:</h2>
 
             <!-- Instagram -->
-            <span class="social-icon"><img src="" alt=""></span>
-            <a href="#instagram-link" class="heading-tertiary">@podarisoljubov</a>
-
+            <div class="social-icon_container">
+                <span class="social-icon"><img src="/img/icons/instagram.png" alt="instagram"></span>
+                <a href="https://www.instagram.com/podari.soljubov/" class="heading-tertiary">@podarisoljubov</a>
+            </div>
             <!-- Facebook -->
-            <span class="social-icon"><img src="" alt=""></span>
-            <a href="#facebook-link" class="heading-tertiary">Podari so ljubov</a>
-
-
-            <!-- Contact -->
+            <div class="social-icon_container">
+                <span class="social-icon"><img src="/img/icons/facebook.png" alt="facebook"></span>
+                <a href="https://www.facebook.com/podarisoljubov.2/" class="heading-tertiary">Podari so ljubov</a>
+            </div>
+        </div>
+        <!-- Contact -->
+        <div class="contact-us">
             <h2 class="heading-secondary">Контакт:</h2>
 
             <!-- Phone number -->
-            <span class="social-icon"><img src="" alt=""></span>
-            <h2 class="heading-tertiary">+389 78 000 000</h2>
-
+            <div class="social-icon_container">
+                <span class="social-icon"><img src="/img/icons/smartphone.png" alt="phone"></span>
+                <h2 class="heading-tertiary">+389 78 000 000</h2>
+            </div>
             <!-- Gmail -->
-            <span class="social-icon"><img src="" alt=""></span>
-            <a href="#gmail-link" class="heading-tertiary">podarisoljubov@gmail.com</a>
+            <div class="social-icon_container">
+                <span class="social-icon"><img src="/img/icons/gmail.png" alt="gmail"></span>
+                <a href="https://mail.google.com/mail/u/0/#inbox" _target="_blank"
+                    class="heading-tertiary">podarisoljubov@gmail.com</a>
+            </div>
+        </div>
+        <!-- copyright  -->
+        <div class="copyright">
+            <div class="heading-tertiary">Подари со љубов 2022</div>
+            <div class="heading-tertiary"><span>&copy;</span>All rights reserved</div>
+        </div>
+        <!-- footer logo -->
+        <div class="footer-logo">
+            <a href="#home"><img src="/img/products/product-1.png" alt="logo" class="footer-logo_img"></a>
         </div>
     </footer>
 

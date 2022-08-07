@@ -9,9 +9,9 @@
   --clr-text-secondary: hsl(0, 0%, 36%);
 
   /* font sizes */
-  --fs-primary: clamp(1.1rem, 3vw + 1rem, 2.4rem);
-  --fs-secondary: clamp(.8rem, 3vw + 1rem, 2rem);
-  --fs-tertiary: clamp(.6rem, 3vw + 1rem, 1.35rem);
+  --fs-primary: clamp(1.8rem, 3vw + .5rem, 2.4rem);
+  --fs-secondary: clamp(1.6rem, 1.5vw + .5rem, 2.4rem);
+  --fs-tertiary: clamp(1.4rem, 1vw + .5rem, 1.6rem);
 
 
   /* line height */
@@ -21,8 +21,8 @@
 
 
   /* width*/
-  --width-primary: min(80%, 1200px)
-    /* media queries */
+  --width-primary: min(80%, 1800px);
+  /* media queries */
 }
 
 
@@ -73,21 +73,28 @@ html:focus-within {
 /* set the font size of 1rem to 10px */
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 
 /* Set core body defaults */
 body {
   min-height: 100vh;
-  width: var(--width-primary);
   margin-inline: auto;
   text-rendering: optimizeSpeed;
   line-height: var(--lh-primary);
-
   background-color: var(--clr-primary);
 }
 
+.container {
+  max-width: var(--width-primary);
+  margin-inline: auto;
+}
 
+section {
+  margin-bottom: 4rem;
+  max-height: 100vh;
+}
 
 
 /* Make images easier to work with */
@@ -122,14 +129,21 @@ select {
 }
 
 
-
-
 /* UTILITIES */
+
+/* LAYOUTS */
 .flex {
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
+.grid {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-flow: row;
+}
+
 
 /* TYPOGRAHPY */
 
@@ -150,12 +164,12 @@ select {
 }
 
 /* Paragraphs */
-.paragraph-primary{
+.paragraph-primary {
   font-size: var(--fs-secondary);
   color: var(--clr-text-primary);
 }
 
-.paragraph-secondary{
+.paragraph-secondary {
   font-size: var(--fs-tertiary);
   color: var(--clr-text-secondary);
 }
@@ -201,62 +215,39 @@ select {
   display: flex;
   align-items: center;
   justify-content: end;
-  margin-right: 2rem;
-  margin-bottom: 2rem;
+  margin: 2rem 2rem 10rem 0;
 }
 
-
+.see-more_img {
+  max-width: 2.5rem;
+  margin-right: 1rem;
+}
 
 /* NAV BAR */
 nav {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  margin: 0 0 3rem 0;
+  justify-content: space-between;
+  margin: 3rem 0;
 }
 
 .logo_img {
-  max-width: 5rem;
-  margin-inline: .5rem;
-  margin-bottom: .2rem;
-  font-size: var(--fs-secondary);
-  color: var(--clr-text-primary);
+  max-width: 4rem;
+  margin: .5rem .5rem;
 }
+
+.nav-sites {
+  display: none;
+}
+
 
 
 /* HEADER - NEW PRODUCTS SECTION */
 
 .slider-container {
-  width: 100%;
-  height: 100%;
+  /* width: 100%;
+    height: 100%; */
   margin-bottom: 4rem;
-}
-
-.slider-box {
-  margin: .8rem;
-  max-width: 30rem;
-
-  display: grid;
-  grid-auto-flow: column;
-  grid-auto-flow: row;
-
-  height: 100%;
-  border-radius: 1rem;
-  box-shadow: .2rem 1rem 1rem var(--clr-secondary);
-}
-
-.slider-img {
-  max-width: 100%;
-  grid-column: 1/3;
-  grid-row: 1/3;
-}
-
-.slider-heading {
-  margin-top: 2rem;
-  margin-left: .5rem;
-  grid-column: 1/6;
-  grid-row: 5/6;
-
 }
 
 .btn {
@@ -265,25 +256,345 @@ nav {
   margin: 1rem;
 }
 
-/* ABOUT US - SECTION */
-
-.about-us{
-  height: 45vh;
-  background-color: var(--clr-secondary);
+.slide-btn {
+  width: 5rem;
+  height: 5rem;
+  padding: 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
+}
+
+.arrow {
+  font-size: 3rem;
+  margin-top: -.7rem;
+  color: var(--clr-text-secondary);
+}
+
+
+
+/* ABOUT US - SECTION */
+.about-us {
+  background-color: var(--clr-secondary);
+  padding: .5rem;
+}
+
+.about-us>* {
+  margin: 2.5rem;
+  text-align: left;
+}
+
+.about-us h1 {
+  text-align: center;
+  margin-bottom: 1.8rem;
+}
+
+.about-us_img {
+  display: grid;
+  place-items: center;
+}
+
+
+/* OUR WORK - SECTION */
+
+.our-work {
+  margin-bottom: 4rem;
+}
+
+/* hides the curve arrows from small screens */
+.curve-arrow_1,
+.curve-arrow_2 {
+  display: none;
+}
+
+/* fixes the issue with the picture in mobile vs desktop */
+.package_img_desktop {
+  display: none;
+}
+
+.package_img_mobile {
+  display: inline-block;
+}
+
+.our-work_container {
+  row-gap: 1.5rem;
+}
+
+.our-work_box {
+  margin: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.box-content {
+  margin: 1rem;
+}
+
+
+.box-img {
+  max-width: 10rem;
+}
+
+.embroidery {
+  grid-column: 1/3;
+  grid-row: 1 / 2;
+}
+
+.package {
+  grid-column: 2 / 4;
+  grid-row: 3 / 4;
+  text-align: right;
+}
+
+.cargo {
+  grid-column: 1 / 3;
+  grid-row: 4 / 5;
+}
+
+
+  /* PRODUCTS SECTIONs */
+
+
+  .products {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+  }
+
+  .product {
+    margin: 3.5rem;
+  }
+
   
-  margin: 0  4rem;
+  .product {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-flow: row;
+    padding: 2.7rem;
+    margin: 2rem 0;
+    max-width: 30rem;
+    height: 100%;
+    border-radius: 1rem;
+    box-shadow: .2rem 1rem 1rem var(--clr-secondary);
+  }
+
+  
+  .product-img {
+    max-width: 100%;
+    grid-column: 1/3;
+    grid-row: 1/3;
+  }
+
+  
+  .product-heading {
+    margin-top: 2rem;
+    margin-left: .5rem;
+    grid-column: 1/6;
+    grid-row: 5/6;
+  }
+
+
+
+
+/* FOOTER SECTION */
+
+footer {
+  margin-top: 4rem;
+  max-height: 100vh;
+  padding: 5rem 0 2rem 0;
+  background-color: var(--clr-secondary);
+  place-items: center;
+  row-gap: 2rem;
+  column-gap: 1rem;
 }
 
-.about-us_content {
-  max-width: 50%;
-  text-align:left;
-  margin: 0 4rem;
+.follow-us {
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+
+.contact-us {
+  grid-column: 3/4;
+  grid-row: 1/2;
+}
+
+.copyright {
+  grid-column: 1/2;
+  grid-row: 3/4;
+}
+
+.footer-logo {
+  max-width: 10rem;
+  grid-column: 3/4;
+  grid-row: 3/4;
+}
+
+.social-icon_container {
+  display: flex;
+  align-items: center;
+  margin: .7rem 0;
+}
+
+.social-icon {
+  margin-right: 1rem;
+  max-width: 1.5rem;
 }
 
 
-.about-us_content h1{
-  margin-bottom: 2rem;
+
+
+/* ***** MEDIA QUERIES ***** */
+@media screen and (min-width:900px) {
+
+
+
+  /* NAVBAR */
+
+  .nav-container{
+    margin: 0;
+  }
+
+
+  .nav-sites {
+    display: flex;
+  }
+
+  .nav-sites>* {
+    margin-inline: 1.25rem;
+    font-size: var(--fs-secondary)
+  }
+
+
+  /* HEADER - NEW PRODUCTS SECTION */
+
+  /* SLIDER  & PRODUCTS */
+
+  .slider-container {
+    /* width: 100%;
+    height: 100%; */
+    margin-bottom: 4rem;
+  }
+
+  .slider-box,
+  .product {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-flow: row;
+
+    margin: .8rem;
+    max-width: 30rem;
+    height: 100%;
+    border-radius: 1rem;
+    box-shadow: .2rem 1rem 1rem var(--clr-secondary);
+  }
+
+  .slider-img,
+  .product-img {
+    max-width: 100%;
+    grid-column: 1/3;
+    grid-row: 1/3;
+  }
+
+  .slider-heading,
+  .product-heading {
+    margin-top: 2rem;
+    margin-left: .5rem;
+    grid-column: 1/6;
+    grid-row: 5/6;
+
+  }
+
+  /* PRODUCTS SECTIONs */
+
+
+  .products {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+  }
+
+  .product {
+    margin: 3.5rem;
+    padding: 2.7rem;
+  }
+
+
+
+
+
+  /* ABOUT US - SECTION */
+  .about-us {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .about-us_content {
+    text-align: left;
+    max-width: 50%;
+  }
+
+  /* OUR WORK - SECTION */
+
+
+  /* adding a bit more space */
+  .our-work {
+    padding: 3rem 0 10rem 0;
+
+  }
+
+  .heading-container {
+    justify-content: flex-start;
+    margin: 4rem 0;
+  }
+
+
+  /* shows the curve arrows on bigger screens */
+  .curve-arrow_1,
+  .curve-arrow_2 {
+    display: inline-block;
+  }
+
+  /* fixes the issue with the picture in mobile vs desktop */
+  .package_img_mobile {
+    display: none;
+  }
+
+  .package_img_desktop {
+    display: inline-block;
+  }
+
+  .our-work_container {
+    row-gap: none;
+    margin-top: 4rem;
+  }
+
+  .our-work_box {
+    margin: 1rem;
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .embroidery {
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
+    margin-top: 5rem;
+  }
+
+  .package {
+    grid-column: 3 / 5;
+    grid-row: 1 / 2;
+    text-align: left;
+
+  }
+
+  .cargo {
+    grid-column: 5 / 7;
+    grid-row: 1 / 2;
+    margin-top: 5rem;
+  }
+
 }
