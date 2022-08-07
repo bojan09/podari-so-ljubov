@@ -370,6 +370,7 @@ nav {
   padding: 2.7rem;
   margin: 2rem 0;
   max-width: 30rem;
+  background-color: var(--clr-secondary);
   height: 100%;
   border-radius: 1rem;
   box-shadow: .2rem 1rem 1rem var(--clr-secondary);
