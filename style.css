@@ -206,11 +206,13 @@ select {
 .paragraph-primary {
   font-size: var(--fs-secondary);
   color: var(--clr-text-primary);
+  line-height: var(--ln-primary);
 }
 
 .paragraph-secondary {
   font-size: var(--fs-tertiary);
   color: var(--clr-text-secondary);
+  line-height: var(--ln-primary);
 }
 
 
