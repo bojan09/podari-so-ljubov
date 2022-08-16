@@ -8,18 +8,21 @@
   rgba(229, 219, 255, 0.15),
   rgba(252, 147, 204, 0.15),
   rgba(252, 147, 204, 0.15));
-  --clr-secondary: rgba(255, 255, 255, 0.40);
-  --clr-secondary-100: rgb(252, 246, 243);
+  --clr-secondary: rgba(245, 255, 255, 0.40);
+  --clr-secondary-100: rgba(245, 255, 255, 0.25);
   --clr-button: rgba(226, 127, 251, 0.1);
   --clr-button-hover: rgba(226, 127, 251, 0.5);
   --clr-button-txt:rgba(255, 105, 48,.9);
   --clr-text-primary: rgba(46, 35, 31, 0.8);
   --clr-text-secondary: rgb(92, 92, 92);
 
+  /* color effects */
+  --box-shadow: 11px 5px 32px -4px rgba(54,54,54,0.2);
+
   /* font sizes */
   --fs-primary: clamp(1.8rem, 2vw + .1rem, 2.8rem);
   --fs-secondary: clamp(1.6rem, 1.4vw + .8rem, 2.4rem);
-  --fs-tertiary: clamp(1.4rem, .8vw + .6rem, 1.8rem);
+  --fs-tertiary: clamp(1.3rem, .8vw + .6rem, 1.8rem);
 
 
   /* line height */
@@ -214,15 +217,17 @@ select {
 /* BUTTON STYLES */
 .btn {
   font-size: var(--fs-tertiary);
-  /* background-color: var(--clr-button); */
   background-color: var(--clr-button);
   color: var(--clr-button-txt);
   border: none;
-  border-radius: .8rem;
+  border-radius: 1.2rem;
   cursor: pointer;
-  width: 10.5rem;
-  height: 4rem;
+  max-width: 12rem;
+  max-height: 2.9rem;
+  display: grid;
+  place-content: center;
 }
+
 
 .btn:hover{
   background-color:var(--clr-button-hover);
@@ -284,16 +289,13 @@ nav {
   line-height: 4.5rem;
   border-radius: 0.5rem;
   background: var(--clr-button);
-  color: var(--clr-text-primary);
+  color: var(--clr-button-txt);
   font-size: 2rem;
-  margin-left: 0.3rem;
   text-align: center;
 
 }
 
 .icons:hover {
-  background: var(--clr-secondary);
-  color: var(--clr-text-primary);
   cursor: pointer;
 }
 
@@ -302,11 +304,8 @@ nav {
   display: grid;
   text-align: left;
   gap: .5rem;
-  background-color: var(--clr-secondary);
-  padding: 1rem;
-  right: -2rem;
-  transition: all 1s ease-in-out;
   border-radius: 1rem;
+  transition: all 1s ease-in-out;
 }
 
 .active >*:hover{
@@ -423,6 +422,7 @@ nav {
   justify-content: center;
   align-content: center;
   flex-wrap: wrap;
+
 }
 
 
@@ -436,7 +436,7 @@ nav {
   height: 100%;
   background-color: var(--clr-secondary);
   border-radius: 1rem;
-  box-shadow: .2rem 1rem 1rem var(--clr-secondary);
+  box-shadow: var(--box-shadow);
 }
 
 
@@ -468,11 +468,10 @@ nav {
 /* FOOTER SECTION */
 
 footer {
-  margin: 2rem;
   margin-top: 4rem;
   max-height: 100vh;
   padding: 5rem 0 2rem 0;
-  background-color: var(--clr-secondary);
+  background-color: var(--clr-secondary-100);
   place-items: center;
   row-gap: 2rem;
   column-gap: 1rem;
@@ -527,8 +526,6 @@ footer {
 /* ***** MEDIA QUERIES ***** */
 @media screen and (min-width:900px) {
 
-
-
   /* NAVBAR */
 
   .nav-container {
@@ -578,6 +575,9 @@ footer {
     box-shadow: .2rem 1rem 1rem var(--clr-secondary);
   }
 
+  .product-heading{
+    grid-column: 1/3;
+  }
 
   /* ABOUT US - SECTION */
   .about-us {
