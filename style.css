@@ -1,12 +1,19 @@
 /* Custom variables */
 :root {
   /* colors */
-  --clr-primary: hsl(36, 71%, 97%);
-  --clr-secondary: hsl(19, 55%, 92%);
-  --clr-secondary-100: hsl(19, 55%, 97%);
-  --clr-button: hsl(179, 32%, 70%);
-  --clr-text-primary: hsl(17, 19%, 15%);
-  --clr-text-secondary: hsl(0, 0%, 36%);
+  --clr-primary: radial-gradient(
+  rgba(255, 201, 195, 1),
+  rgba(252, 204, 221, 0.15),
+  rgba(226, 127, 251, 0.15),
+  rgba(229, 219, 255, 0.15),
+  rgba(252, 147, 204, 0.15),
+  rgba(252, 147, 204, 0.15));
+  --clr-secondary: rgba(255, 255, 255, 0.40);
+  --clr-secondary-100: rgb(252, 246, 243);
+  --clr-button: rgba(255, 217, 201, .5);
+  --clr-button-txt:rgba(255, 105, 48,.9);
+  --clr-text-primary: rgba(46, 35, 31, 0.8);
+  --clr-text-secondary: rgb(92, 92, 92);
 
   /* font sizes */
   --fs-primary: clamp(1.8rem, 2vw + .1rem, 2.8rem);
@@ -83,7 +90,7 @@ body {
   margin-inline: auto;
   text-rendering: optimizeSpeed;
   line-height: var(--lh-primary);
-  background-color: var(--clr-primary);
+  background-image: var(--clr-primary);
 }
 
 .container {
@@ -207,7 +214,7 @@ select {
 .btn {
   font-size: var(--fs-tertiary);
   background-color: var(--clr-button);
-  color: var(--clr-text-primary);
+  color: var(--clr-button-txt);
   border: none;
   border-radius: .8rem;
   cursor: pointer;
@@ -235,7 +242,7 @@ select {
   display: flex;
   align-items: center;
   justify-content: end;
-  margin: 2rem 2rem 10rem 0;
+  margin: 2rem 2rem 3rem 0;
 }
 
 .see-more_img {
@@ -253,7 +260,7 @@ nav {
 
 .nav-sites {
   display: none;
-  position: relative;
+  font-weight: bold;
 }
 
 /* Buger menu styles - start*/
@@ -323,6 +330,8 @@ nav {
   padding: .5rem;
   display: grid;
   place-items: center;
+  margin: 2rem;
+  border-radius: 1.5rem;
 }
 
 .about-us_content {
@@ -408,10 +417,6 @@ nav {
   flex-wrap: wrap;
 }
 
-.product {
-  margin: 3.5rem;
-}
-
 
 .product {
   display: grid;
@@ -420,8 +425,8 @@ nav {
   padding: 2.7rem;
   margin: 2rem 0;
   max-width: 30rem;
-  background-color: var(--clr-secondary);
   height: 100%;
+  background-color: var(--clr-secondary);
   border-radius: 1rem;
   box-shadow: .2rem 1rem 1rem var(--clr-secondary);
 }
@@ -445,6 +450,7 @@ nav {
   grid-row: 4/5;
   display: grid;
   place-items: center;
+  padding: .2rem;
 
 }
 
@@ -454,6 +460,7 @@ nav {
 /* FOOTER SECTION */
 
 footer {
+  margin: 2rem;
   margin-top: 4rem;
   max-height: 100vh;
   padding: 5rem 0 2rem 0;
@@ -461,6 +468,7 @@ footer {
   place-items: center;
   row-gap: 2rem;
   column-gap: 1rem;
+  border-radius: 1.5rem;
 }
 
 .follow-us {
