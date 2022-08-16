@@ -276,6 +276,18 @@ nav {
 .nav-sites {
   display: none;
   font-weight: bold;
+
+  background-color: var(--clr-button);
+  color: var(--clr-button-txt);
+}
+
+.nav-sites a{
+  padding: .2rem .7rem;
+  font-style: var(--fs-secondary)
+}
+
+.nav-sites a:hover{
+  background-color: var(--clr-button-hover);
 }
 
 /* Buger menu styles - start*/
@@ -541,6 +553,8 @@ footer {
 
   .nav-sites {
     display: flex;
+    background-color: rgba(0, 0, 0, .0);
+    color: var(--clr-text-primary);
   }
 
 
