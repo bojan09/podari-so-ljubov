@@ -277,6 +277,7 @@ nav {
   display: none;
   font-weight: bold;
 
+  margin-inline: .5rem;
   background-color: var(--clr-button);
   color: var(--clr-button-txt);
 }
