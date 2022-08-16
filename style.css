@@ -9,9 +9,9 @@
   --clr-text-secondary: hsl(0, 0%, 36%);
 
   /* font sizes */
-  --fs-primary: clamp(1.6rem, 2vw + .1rem, 2.8rem);
-  --fs-secondary: clamp(1.4rem, 1.4vw + .8rem, 2.4rem);
-  --fs-tertiary: clamp(1rem, .8vw + .6rem, 1.8rem);
+  --fs-primary: clamp(1.8rem, 2vw + .1rem, 2.8rem);
+  --fs-secondary: clamp(1.6rem, 1.4vw + .8rem, 2.4rem);
+  --fs-tertiary: clamp(1.4rem, .8vw + .6rem, 1.8rem);
 
 
   /* line height */
@@ -21,7 +21,7 @@
 
 
   /* width*/
-  --width-primary: min(90%, 1800px);
+  --width-primary: min(85%, 1800px);
 
 }
 
@@ -93,7 +93,7 @@ body {
 
 section {
   margin-bottom: 4rem;
-  max-height: 100vh;
+  max-height: 100%;
 }
 
 
@@ -251,15 +251,64 @@ nav {
   margin: 3rem 0;
 }
 
+.nav-sites {
+  display: none;
+  position: relative;
+}
+
+/* Buger menu styles - start*/
+
+#menu-btn {
+  display: inline-block;
+}
+
+
+.icons {
+  height: 4.5rem;
+  width: 4.5rem;
+  line-height: 4.5rem;
+  border-radius: 0.5rem;
+  background: var(--clr-button);
+  color: var(--clr-text-primary);
+  font-size: 2rem;
+  margin-left: 0.3rem;
+  text-align: center;
+
+}
+
+.icons:hover {
+  background: var(--clr-secondary);
+  color: var(--clr-text-primary);
+  cursor: pointer;
+}
+
+
+ .active{
+  display: grid;
+  text-align: left;
+  gap: .5rem;
+  background-color: var(--clr-secondary);
+  padding: 1rem;
+  right: -2rem;
+  transition: all 1s ease-in-out;
+  border-radius: 1rem;
+}
+
+.active >*:hover{
+ color: var(--clr-text-primary);
+ background-color: var(--clr-secondary-100);
+}
+
+
+
+
+/* Buger menu styles - end*/
+
+
 .logo_img {
   max-width: 4rem;
   margin: .5rem .5rem;
 }
-
-.nav-sites {
-  display: none;
-}
-
 
 
 
@@ -276,12 +325,12 @@ nav {
   place-items: center;
 }
 
-.about-us_content{
-  max-width: 50%;
-  margin: 2rem 0; 
+.about-us_content {
+  max-width: 80%;
+  margin: 2rem 0;
 }
 
-.about-us h1{
+.about-us h1 {
   text-align: center;
 
 }
@@ -460,10 +509,15 @@ footer {
     margin: 0;
   }
 
+  .icons{
+    display: none;
+  }
 
   .nav-sites {
     display: flex;
   }
+
+
 
   .nav-sites>* {
     margin-inline: 1.25rem;
@@ -499,29 +553,6 @@ footer {
   }
 
 
-/* 
-  .product-img {
-    max-width: 100%;
-    grid-column: 1/3;
-    grid-row: 1/3;
-  }
-
-  .product-heading {
-    grid-column: 1/2;
-    grid-row: 3/4;
-
-  }
-
-  .product-btn {
-    grid-column: 5/6;
-    grid-row: 4/5;
-    display: grid;
-    place-items: center;
-
-  } */
-
-
-
   /* ABOUT US - SECTION */
   .about-us {
     display: flex;
@@ -554,13 +585,6 @@ footer {
     margin: 4rem 0;
   }
 
-
-  /* shows the curve arrows on bigger screens */
-  .curve-arrow_1,
-  .curve-arrow_2 {
-    display: inline-block;
-  }
-
   /* fixes the issue with the picture in mobile vs desktop */
   .package_img_mobile {
     display: none;
@@ -582,7 +606,7 @@ footer {
   }
 
   .embroidery {
-    grid-column: 1 / 3;
+    grid-column: 1 / 2;
     grid-row: 1 / 2;
     margin-top: 5rem;
   }

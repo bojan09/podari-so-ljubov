@@ -5,24 +5,36 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/img/icons/yarn-ball.png">
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <!-- Font Awsome CDN  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
     <link rel="stylesheet" href="style.css">
     <title>Продукти</title>
 </head>
 
 <body>
-    <!-- NAVIGATION  -->
     <nav class="container">
         <!-- logo -->
         <div class="nav-logo flex"><span><img src="/img/products/product-1.png" alt="logo-img" class="logo_img"></span>
             <h1 class="heading-secondary"><a href="/index.html">Подари со љубов</a></h1>
         </div>
 
+
+
         <!-- nav sites -->
-        <div class="nav-sites flex active">
+        <div class="nav-sites">
             <a href="/index.html" id="home">Почетна</a>
             <a href="./products.html" id="products">Продукти</a>
             <a href="#footer" id="contact">Контакт</a>
         </div>
+
+        <!-- Font Awesome Icons -->
+        <div class="icons">
+            <div class="fas fa-bars" id="menu-btn"></div>
+        </div>
+
     </nav>
     <header class="container">
         <div class="heading-container">
@@ -171,7 +183,26 @@
     </footer>
 
 
-    <script src="/script.js"></script>
+    <script>
+
+        // Burger menu
+
+        const menuBtn = document.querySelector("#menu-btn");
+        const navbar = document.querySelector(".nav-sites");
+
+        menuBtn.addEventListener("click", () => {
+            menuBtn.classList.toggle("active");
+            navbar.classList.toggle("active");
+        });
+
+        document.querySelectorAll(".nav-sites").forEach((link) =>
+            link.addEventListener("click", () => {
+                menuBtn.classList.toggle("remove");
+                navbar.classList.toggle("remove");
+            })
+        );
+
+    </script>
 </body>
 
 </html>
